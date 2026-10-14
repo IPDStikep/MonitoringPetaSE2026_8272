@@ -1,0 +1,3088 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+  <base target="_self">
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>Data Wilayah SLS/Sub SLS - BPS Kota Tidore Kepulauan</title>
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+
+
+  <style>
+
+    :root {
+
+      --primary: #0756a4;
+
+      --primary-dark: #073b75;
+
+      --primary-light: #eaf3ff;
+
+      --accent: #f59e0b;
+
+      --bg: #f4f7fb;
+
+      --text: #172b4d;
+
+      --muted: #718096;
+
+      --border: #e5eaf2;
+
+      --success: #15803d;
+
+      --danger: #dc2626;
+
+    }
+
+
+
+    * {
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    body {
+
+      margin: 0;
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      font-family: 'Inter', Arial, sans-serif;
+
+      font-size: 14px;
+
+    }
+
+
+
+    button, input, select {
+
+      font-family: inherit;
+
+    }
+
+
+
+    .page-container {
+
+      width: min(1500px, 100%);
+
+      margin: auto;
+
+      padding: 26px;
+
+    }
+
+
+
+    /* HEADER */
+
+
+
+    .top-header {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding: 21px 25px;
+
+      margin-bottom: 25px;
+
+      background: #fff;
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      box-shadow: 0 4px 18px rgba(20, 50, 90, .04);
+
+    }
+
+
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 17px;
+
+      min-width: 0;
+
+    }
+
+
+
+    .logo-bps {
+
+      display: block;
+
+      width: 68px;
+
+      height: 68px;
+
+      object-fit: contain;
+
+      flex-shrink: 0;
+
+    }
+
+
+
+    .brand h1 {
+
+      margin: 0 0 7px;
+
+      color: var(--primary-dark);
+
+      font-size: clamp(18px, 2vw, 25px);
+
+      font-weight: 800;
+
+      line-height: 1.3;
+
+    }
+
+
+
+    .brand p {
+
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.6;
+
+    }
+
+
+
+    .header-label {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      padding: 10px 14px;
+
+      background: var(--primary-light);
+
+      border-radius: 12px;
+
+      color: var(--primary);
+
+      font-weight: 700;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .header-label i {
+
+      font-size: 18px;
+
+    }
+
+
+
+    /* SECTION TITLE */
+
+
+
+    .section-heading {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      margin: 0 0 17px;
+
+    }
+
+
+
+    .section-heading h2 {
+
+      margin: 0 0 6px;
+
+      font-size: 17px;
+
+      font-weight: 800;
+
+    }
+
+
+
+    .section-heading p {
+
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.6;
+
+    }
+
+
+
+    /* DASHBOARD */
+
+
+
+    .summary-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 17px;
+
+      margin-bottom: 27px;
+
+    }
+
+
+
+    .summary-card {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 17px;
+
+      min-height: 125px;
+
+      padding: 22px;
+
+      background: #fff;
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
+      box-shadow: 0 4px 15px rgba(20, 50, 90, .035);
+
+    }
+
+
+
+    .summary-icon {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 54px;
+
+      height: 54px;
+
+      flex-shrink: 0;
+
+      border-radius: 15px;
+
+      font-size: 25px;
+
+    }
+
+
+
+    .icon-blue {
+
+      color: #0756a4;
+
+      background: #eaf3ff;
+
+    }
+
+
+
+    .icon-orange {
+
+      color: #b45309;
+
+      background: #fff4df;
+
+    }
+
+
+
+    .icon-green {
+
+      color: #15803d;
+
+      background: #e7f8ed;
+
+    }
+
+
+
+    .summary-label {
+
+      margin-bottom: 8px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+    }
+
+
+
+    .summary-value {
+
+      color: var(--text);
+
+      font-size: 29px;
+
+      font-weight: 800;
+
+      line-height: 1.1;
+
+      overflow-wrap: anywhere;
+
+    }
+
+
+
+    .summary-note {
+
+      margin-top: 7px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+    }
+
+
+
+    /* PANELS */
+
+
+
+    .panel {
+
+      margin-bottom: 23px;
+
+      padding: 23px;
+
+      background: #fff;
+
+      border: 1px solid var(--border);
+
+      border-radius: 17px;
+
+      box-shadow: 0 4px 15px rgba(20, 50, 90, .035);
+
+    }
+
+
+
+    .panel-heading {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      justify-content: space-between;
+
+      gap: 14px;
+
+      margin-bottom: 22px;
+
+    }
+
+
+
+    .panel-heading h3 {
+
+      margin: 0 0 6px;
+
+      font-size: 16px;
+
+      font-weight: 800;
+
+    }
+
+
+
+    .panel-heading p {
+
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.6;
+
+    }
+
+
+
+    .panel-heading-icon {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 43px;
+
+      height: 43px;
+
+      flex-shrink: 0;
+
+      border-radius: 12px;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-size: 21px;
+
+    }
+
+
+
+    /* FORM */
+
+
+
+    .form-label {
+
+      margin-bottom: 8px;
+
+      color: #344563;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+    }
+
+
+
+    .required {
+
+      color: var(--danger);
+
+    }
+
+
+
+    .form-control {
+
+      min-height: 45px;
+
+      border-color: #dfe6ef;
+
+      border-radius: 10px;
+
+      font-size: 13px;
+
+      box-shadow: none !important;
+
+    }
+
+
+
+    .form-control:focus {
+
+      border-color: #6aa7e8;
+
+      box-shadow: 0 0 0 3px rgba(7, 86, 164, .09) !important;
+
+    }
+
+
+
+    .form-control::placeholder {
+
+      color: #a0aaba;
+
+    }
+
+
+
+    .form-hint {
+
+      margin-top: 6px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.5;
+
+    }
+
+
+
+    .form-actions {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 23px;
+
+    }
+
+
+
+    .btn {
+
+      min-height: 41px;
+
+      padding: 10px 16px;
+
+      border-radius: 9px;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+    }
+
+
+
+    .btn-primary {
+
+      background: var(--primary);
+
+      border-color: var(--primary);
+
+    }
+
+
+
+    .btn-primary:hover {
+
+      background: var(--primary-dark);
+
+      border-color: var(--primary-dark);
+
+    }
+
+
+
+    .btn-outline-secondary {
+
+      border-color: #d8e0eb;
+
+      color: #52627a;
+
+    }
+
+
+
+    .btn-light {
+
+      border: 1px solid var(--border);
+
+      background: #fff;
+
+      color: #475569;
+
+    }
+
+
+
+    .edit-notice {
+
+      display: none;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-bottom: 18px;
+
+      padding: 12px 14px;
+
+      background: #fff7e6;
+
+      border: 1px solid #fde3a7;
+
+      border-radius: 10px;
+
+      color: #92400e;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+    }
+
+
+
+    .edit-notice.show {
+
+      display: flex;
+
+    }
+
+
+
+    /* SEARCH AND TABLE */
+
+
+
+    .table-toolbar {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 14px;
+
+      margin-bottom: 17px;
+
+    }
+
+
+
+    .search-box {
+
+      position: relative;
+
+      width: min(420px, 100%);
+
+    }
+
+
+
+    .search-box i {
+
+      position: absolute;
+
+      top: 50%;
+
+      left: 14px;
+
+      transform: translateY(-50%);
+
+      color: #8997aa;
+
+      font-size: 15px;
+
+      pointer-events: none;
+
+    }
+
+
+
+    .search-box input {
+
+      padding-left: 40px;
+
+    }
+
+
+
+    .table-count {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .table-responsive {
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+    }
+
+
+
+    .table {
+
+      margin-bottom: 0;
+
+      vertical-align: middle;
+
+    }
+
+
+
+    .table thead th {
+
+      padding: 15px 14px;
+
+      background: #f5f8fc;
+
+      border-bottom: 1px solid var(--border);
+
+      color: #52627a;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: .25px;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .table tbody td {
+
+      padding: 14px;
+
+      border-color: #edf1f6;
+
+      color: #344563;
+
+      font-size: 12px;
+
+    }
+
+
+
+    .table tbody tr:last-child td {
+
+      border-bottom: 0;
+
+    }
+
+
+
+    .table tbody tr:hover td {
+
+      background: #fbfdff;
+
+    }
+
+
+
+    .number-badge {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-width: 32px;
+
+      padding: 6px 9px;
+
+      background: #edf4ff;
+
+      border-radius: 7px;
+
+      color: var(--primary);
+
+      font-weight: 800;
+
+    }
+
+
+
+    .id-text {
+
+      color: var(--primary);
+
+      font-weight: 700;
+
+      overflow-wrap: anywhere;
+
+    }
+
+
+
+    .region-name {
+
+      color: #243b5a;
+
+      font-weight: 700;
+
+    }
+
+
+
+    .action-buttons {
+
+      display: flex;
+
+      gap: 7px;
+
+    }
+
+
+
+    .btn-icon {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 34px;
+
+      height: 34px;
+
+      padding: 0;
+
+      border: 1px solid var(--border);
+
+      border-radius: 8px;
+
+      background: #fff;
+
+      color: var(--primary);
+
+      font-size: 15px;
+
+    }
+
+
+
+    .btn-icon:hover {
+
+      background: var(--primary-light);
+
+    }
+
+
+
+    .btn-icon.delete {
+
+      color: var(--danger);
+
+    }
+
+
+
+    .btn-icon.delete:hover {
+
+      background: #fff0f0;
+
+    }
+
+
+
+    .empty-state {
+
+      padding: 44px 20px !important;
+
+      text-align: center;
+
+      color: var(--muted) !important;
+
+    }
+
+
+
+    .empty-state i {
+
+      display: block;
+
+      margin-bottom: 12px;
+
+      color: #aab7c8;
+
+      font-size: 34px;
+
+    }
+
+
+
+    .empty-state strong {
+
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: #475569;
+
+      font-size: 13px;
+
+    }
+
+
+
+    .loading-state {
+
+      padding: 35px 20px;
+
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+    }
+
+
+
+    .loading-state .spinner-border {
+
+      width: 23px;
+
+      height: 23px;
+
+      margin-bottom: 10px;
+
+      color: var(--primary);
+
+    }
+
+
+
+    /* FOOTER */
+
+
+
+    .footer {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 8px 3px 18px;
+
+      color: #8290a5;
+
+      font-size: 11px;
+
+      line-height: 1.6;
+
+    }
+
+
+
+    /* ALERT */
+
+
+
+    .alert-area {
+
+      position: fixed;
+
+      top: 20px;
+
+      right: 20px;
+
+      z-index: 9999;
+
+      width: min(390px, calc(100% - 40px));
+
+    }
+
+
+
+    .app-alert {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 11px;
+
+      padding: 15px 16px;
+
+      margin-bottom: 10px;
+
+      background: #fff;
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      box-shadow: 0 10px 35px rgba(15, 35, 65, .13);
+
+      animation: slideIn .2s ease;
+
+    }
+
+
+
+    .app-alert i {
+
+      margin-top: 1px;
+
+      font-size: 19px;
+
+    }
+
+
+
+    .app-alert.success i {
+
+      color: var(--success);
+
+    }
+
+
+
+    .app-alert.error i {
+
+      color: var(--danger);
+
+    }
+
+
+
+    .app-alert.info i {
+
+      color: var(--primary);
+
+    }
+
+
+
+    .app-alert strong {
+
+      display: block;
+
+      margin-bottom: 4px;
+
+      font-size: 12px;
+
+    }
+
+
+
+    .app-alert span {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.6;
+
+      overflow-wrap: anywhere;
+
+    }
+
+
+
+    @keyframes slideIn {
+
+      from {
+
+        opacity: 0;
+
+        transform: translateY(-8px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+      }
+
+    }
+
+
+
+    /* RESPONSIVE */
+
+
+
+    @media (max-width: 900px) {
+
+      .page-container {
+
+        padding: 17px;
+
+      }
+
+
+
+      .summary-grid {
+
+        gap: 12px;
+
+      }
+
+
+
+      .summary-card {
+
+        gap: 12px;
+
+        padding: 17px;
+
+      }
+
+
+
+      .summary-icon {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 21px;
+
+      }
+
+
+
+      .summary-value {
+
+        font-size: 25px;
+
+      }
+
+
+
+      .panel {
+
+        padding: 19px;
+
+      }
+
+    }
+
+
+
+    @media (max-width: 640px) {
+
+      .page-container {
+
+        padding: 12px;
+
+      }
+
+
+
+      .top-header {
+
+        align-items: flex-start;
+
+        padding: 17px;
+
+        border-radius: 14px;
+
+      }
+
+
+
+      .brand {
+
+        gap: 12px;
+
+      }
+
+
+
+      .logo-bps {
+
+        width: 51px;
+
+        height: 51px;
+
+      }
+
+
+
+      .brand h1 {
+
+        font-size: 17px;
+
+      }
+
+
+
+      .brand p {
+
+        font-size: 11px;
+
+      }
+
+
+
+      .header-label {
+
+        display: none;
+
+      }
+
+
+
+      .summary-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-bottom: 22px;
+
+      }
+
+
+
+      .summary-card {
+
+        min-height: 96px;
+
+        padding: 16px;
+
+      }
+
+
+
+      .summary-value {
+
+        font-size: 25px;
+
+      }
+
+
+
+      .section-heading {
+
+        align-items: flex-start;
+
+      }
+
+
+
+      .panel {
+
+        padding: 16px;
+
+        margin-bottom: 17px;
+
+        border-radius: 14px;
+
+      }
+
+
+
+      .panel-heading {
+
+        margin-bottom: 18px;
+
+      }
+
+
+
+      .table-toolbar {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+      }
+
+
+
+      .search-box {
+
+        width: 100%;
+
+      }
+
+
+
+      .table-count {
+
+        white-space: normal;
+
+      }
+
+
+
+      .form-actions .btn {
+
+        flex: 1 1 auto;
+
+      }
+
+
+
+      .footer {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+  <div class="alert-area" id="alertArea" aria-live="polite"></div>
+
+
+
+  <main class="page-container">
+
+
+
+    <!-- HEADER -->
+
+    <header class="top-header">
+
+      <div class="brand">
+
+        <img
+
+          class="logo-bps"
+
+          src="https://drive.google.com/uc?export=view&id=1Qq7o-eMSlWvRZ6HMDZKCd-HVQwJN2xcB"
+
+          alt="Logo Badan Pusat Statistik"
+
+          onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/d/1Qq7o-eMSlWvRZ6HMDZKCd-HVQwJN2xcB';"
+
+        >
+
+        <div>
+
+          <h1>BPS Kota Tidore Kepulauan</h1>
+
+          <p>Data Wilayah SLS/Sub SLS</p>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="header-label">
+
+        <i class="bi bi-database-check"></i>
+
+        <span>Database Wilayah</span>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- DASHBOARD -->
+
+    <section>
+
+      <div class="section-heading">
+
+        <div>
+
+          <h2>Dashboard Ringkasan</h2>
+
+          <p>Ringkasan data wilayah yang tersimpan dalam database.</p>
+
+        </div>
+
+
+
+        <button class="btn btn-light" id="btnRefreshTop" type="button" onclick="muatData()">
+
+          <i class="bi bi-arrow-clockwise me-1"></i> Perbarui
+
+        </button>
+
+      </div>
+
+
+
+      <div class="summary-grid">
+
+        <div class="summary-card">
+
+          <div class="summary-icon icon-blue">
+
+            <i class="bi bi-geo-alt"></i>
+
+          </div>
+
+          <div>
+
+            <div class="summary-label">Total Data Wilayah</div>
+
+            <div class="summary-value" id="totalWilayah">0</div>
+
+            <div class="summary-note">Seluruh data SLS/Sub SLS</div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+          <div class="summary-icon icon-orange">
+
+            <i class="bi bi-map"></i>
+
+          </div>
+
+          <div>
+
+            <div class="summary-label">Jumlah Kecamatan</div>
+
+            <div class="summary-value" id="totalKecamatan">0</div>
+
+            <div class="summary-note">Kecamatan unik dalam data</div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+          <div class="summary-icon icon-green">
+
+            <i class="bi bi-buildings"></i>
+
+          </div>
+
+          <div>
+
+            <div class="summary-label">Jumlah Kelurahan</div>
+
+            <div class="summary-value" id="totalKelurahan">0</div>
+
+            <div class="summary-note">Kelurahan unik dalam data</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- FORM TAMBAH / EDIT -->
+
+    <section class="panel" id="formPanel">
+
+      <div class="panel-heading">
+
+        <div>
+
+          <h3 id="formTitle">Tambah Data Wilayah</h3>
+
+          <p id="formSubtitle">Masukkan informasi wilayah pada formulir berikut.</p>
+
+        </div>
+
+        <div class="panel-heading-icon">
+
+          <i class="bi bi-pencil-square"></i>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="edit-notice" id="editNotice">
+
+        <i class="bi bi-info-circle"></i>
+
+        <span>Mode edit aktif. Perubahan akan diterapkan pada data yang dipilih.</span>
+
+      </div>
+
+
+
+      <form id="wilayahForm" onsubmit="simpanForm(event)">
+
+        <input type="hidden" id="editRow" value="">
+
+
+
+        <div class="row g-3">
+
+          <div class="col-12 col-md-4">
+
+            <label for="nomorUrut" class="form-label">
+
+              Nomor Urut <span class="required">*</span>
+
+            </label>
+
+            <input
+
+              type="number"
+
+              class="form-control"
+
+              id="nomorUrut"
+
+              min="1"
+
+              step="1"
+
+              placeholder="Contoh: 1"
+
+              required
+
+            >
+
+            <div class="form-hint">
+
+              Nomor diisi secara manual. Nomor tidak harus berurutan.
+
+            </div>
+
+          </div>
+
+
+
+          <div class="col-12 col-md-8">
+
+            <label for="idSlsSubSls" class="form-label">
+
+              ID SLS/Sub SLS <span class="required">*</span>
+
+            </label>
+
+            <input
+
+              type="text"
+
+              class="form-control"
+
+              id="idSlsSubSls"
+
+              placeholder="Masukkan ID SLS/Sub SLS"
+
+              maxlength="100"
+
+              required
+
+            >
+
+          </div>
+
+
+
+          <div class="col-12 col-md-6">
+
+            <label for="kecamatan" class="form-label">
+
+              Kecamatan <span class="required">*</span>
+
+            </label>
+
+            <input
+
+              type="text"
+
+              class="form-control"
+
+              id="kecamatan"
+
+              placeholder="Masukkan Nama Kecamatan"
+
+              maxlength="150"
+
+              required
+
+            >
+
+          </div>
+
+
+
+          <div class="col-12 col-md-6">
+
+            <label for="kelurahan" class="form-label">
+
+              Kelurahan <span class="required">*</span>
+
+            </label>
+
+            <input
+
+              type="text"
+
+              class="form-control"
+
+              id="kelurahan"
+
+              placeholder="Masukkan Nama Kelurahan"
+
+              maxlength="150"
+
+              required
+
+            >
+
+          </div>
+
+
+
+          <div class="col-12">
+
+            <label for="namaWilayah" class="form-label">
+
+              Nama Wilayah <span class="required">*</span>
+
+            </label>
+
+            <input
+
+              type="text"
+
+              class="form-control"
+
+              id="namaWilayah"
+
+              placeholder="Masukkan Nama Wilayah SLS/Sub SLS"
+
+              maxlength="250"
+
+              required
+
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <div class="form-actions">
+
+          <button type="submit" class="btn btn-primary" id="btnSimpan">
+
+            <i class="bi bi-plus-circle me-1"></i>
+
+            <span id="btnSimpanText">Simpan Data</span>
+
+          </button>
+
+
+
+          <button type="button" class="btn btn-outline-secondary" onclick="resetForm()">
+
+            <i class="bi bi-arrow-counterclockwise me-1"></i>
+
+            <span id="btnResetText">Reset Form</span>
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+
+    <!-- TABEL DATA -->
+
+    <section class="panel">
+
+      <div class="panel-heading">
+
+        <div>
+
+          <h3>Daftar Data Wilayah</h3>
+
+          <p>Cari, Periksa, Edit, atau Hapus data wilayah yang telah tersimpan.</p>
+
+        </div>
+
+        <div class="panel-heading-icon">
+
+          <i class="bi bi-table"></i>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="table-toolbar">
+
+        <div class="search-box">
+
+          <i class="bi bi-search"></i>
+
+          <input
+
+            type="search"
+
+            id="searchInput"
+
+            class="form-control"
+
+            placeholder="Cari ID, Kecamatan, Kelurahan, Nama Wilayah..."
+
+            autocomplete="off"
+
+            oninput="tampilkanTabel()"
+
+          >
+
+        </div>
+
+
+
+        <div class="table-count" id="tableCount">
+
+          Menampilkan 0 data
+
+        </div>
+
+      </div>
+
+
+
+      <div class="table-responsive">
+
+        <table class="table">
+
+          <thead>
+
+            <tr>
+
+              <th>NO.</th>
+
+              <th>ID SLS/SUB SLS</th>
+
+              <th>KECAMATAN</th>
+
+              <th>KELURAHAN</th>
+
+              <th>NAMA WILAYAH</th>
+
+              <th class="text-center">AKSI</th>
+
+            </tr>
+
+          </thead>
+
+
+
+          <tbody id="tableBody">
+
+            <tr>
+
+              <td colspan="6">
+
+                <div class="loading-state">
+
+                  <div class="spinner-border" role="status"></div>
+
+                  <div>Memuat data wilayah...</div>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+
+      <span>© <span id="tahunSekarang"></span> IPDS BPS Kota Tidore Kepulauan</span>
+
+      <span>Data Wilayah SLS/Sub SLS</span>
+
+    </footer>
+
+  </main>
+
+
+
+  <script>
+
+    'use strict';
+
+
+
+    let daftarWilayah = [];
+
+    let sedangMemuat = false;
+
+    let sedangMenyimpan = false;
+
+
+
+    /** Mengirim permintaan ke API Vercel. Token rahasia hanya ada di server. */
+    async function panggilApi(payload) {
+      const response = await fetch('/api/wilayah', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      let hasil;
+      try { hasil = await response.json(); }
+      catch (_) { throw new Error('Respons server tidak dapat dibaca.'); }
+      if (!response.ok || (hasil && hasil.success === false)) {
+        throw new Error((hasil && (hasil.message || hasil.error)) || 'Permintaan gagal.');
+      }
+      return hasil;
+    }
+
+    document.getElementById('tahunSekarang').textContent =
+
+      new Date().getFullYear();
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+      muatData();
+
+    });
+
+
+
+    /**
+
+     * Membaca data dari Google Sheets melalui Code.gs.
+
+     */
+
+    async function muatData() {
+      if (sedangMemuat) return;
+      sedangMemuat = true;
+      setLoadingTabel(true);
+      try {
+        const data = await panggilApi({ action: 'get' });
+        sedangMemuat = false;
+        daftarWilayah = Array.isArray(data.data) ? data.data : (Array.isArray(data) ? data : []);
+        perbaruiDashboard();
+        tampilkanTabel();
+      } catch (error) {
+        sedangMemuat = false;
+        setLoadingTabel(false);
+        const pesan = ambilPesanError(error);
+        tampilkanErrorTabel(pesan);
+        tampilkanAlert('Gagal memuat data', pesan, 'error');
+      }
+    }
+
+    /**
+
+     * Memperbarui tiga kartu dashboard.
+
+     */
+
+    function perbaruiDashboard() {
+
+      const kecamatan = new Set();
+
+      const kelurahan = new Set();
+
+
+
+      daftarWilayah.forEach(function (item) {
+
+        const namaKecamatan = nilaiItem(item, [
+
+          'kecamatan', 'Kecamatan'
+
+        ]);
+
+
+
+        const namaKelurahan = nilaiItem(item, [
+
+          'kelurahan', 'Kelurahan'
+
+        ]);
+
+
+
+        if (namaKecamatan) {
+
+          kecamatan.add(namaKecamatan.trim().toLocaleLowerCase('id'));
+
+        }
+
+
+
+        if (namaKelurahan) {
+
+          kelurahan.add(
+
+            (
+
+              namaKecamatan.trim() + '|' + namaKelurahan.trim()
+
+            ).toLocaleLowerCase('id')
+
+          );
+
+        }
+
+      });
+
+
+
+      document.getElementById('totalWilayah').textContent =
+
+        formatAngka(daftarWilayah.length);
+
+
+
+      document.getElementById('totalKecamatan').textContent =
+
+        formatAngka(kecamatan.size);
+
+
+
+      document.getElementById('totalKelurahan').textContent =
+
+        formatAngka(kelurahan.size);
+
+    }
+
+
+
+    /**
+
+     * Menampilkan tabel dan menjalankan pencarian.
+
+     */
+
+    function tampilkanTabel() {
+
+      const tbody = document.getElementById('tableBody');
+
+      const kataKunci = document.getElementById('searchInput')
+
+        .value.trim().toLocaleLowerCase('id');
+
+
+
+      const hasil = daftarWilayah
+
+        .map(function (item, index) {
+
+          return {
+
+            item: item,
+
+            index: index
+
+          };
+
+        })
+
+        .filter(function (entry) {
+
+          const item = entry.item;
+
+
+
+          const teks = [
+
+            nilaiItem(item, ['nomorUrut', 'nomor', 'Nomor Urut']),
+
+            nilaiItem(item, [
+
+              'idSlsSubSls', 'idSls', 'id', 'ID SLS/Sub SLS'
+
+            ]),
+
+            nilaiItem(item, ['kecamatan', 'Kecamatan']),
+
+            nilaiItem(item, ['kelurahan', 'Kelurahan']),
+
+            nilaiItem(item, ['namaWilayah', 'nama', 'Nama Wilayah'])
+
+          ].join(' ').toLocaleLowerCase('id');
+
+
+
+          return teks.includes(kataKunci);
+
+        });
+
+
+
+      document.getElementById('tableCount').textContent =
+
+        'Menampilkan ' + hasil.length + ' dari ' +
+
+        daftarWilayah.length + ' data';
+
+
+
+      if (sedangMemuat) {
+
+        setLoadingTabel(true);
+
+        return;
+
+      }
+
+
+
+      if (hasil.length === 0) {
+
+        tbody.innerHTML = '';
+
+
+
+        const tr = document.createElement('tr');
+
+        const td = document.createElement('td');
+
+        td.colSpan = 6;
+
+        td.className = 'empty-state';
+
+
+
+        const icon = document.createElement('i');
+
+        icon.className = 'bi bi-inbox';
+
+
+
+        const title = document.createElement('strong');
+
+        title.textContent = kataKunci
+
+          ? 'Data tidak ditemukan'
+
+          : 'Belum ada data wilayah';
+
+
+
+        const description = document.createElement('span');
+
+        description.textContent = kataKunci
+
+          ? 'Coba gunakan kata kunci pencarian yang lain.'
+
+          : 'Tambahkan data melalui formulir di atas.';
+
+
+
+        td.append(icon, title, description);
+
+        tr.appendChild(td);
+
+        tbody.appendChild(tr);
+
+        return;
+
+      }
+
+
+
+      tbody.innerHTML = '';
+
+
+
+      hasil.forEach(function (entry) {
+
+        const item = entry.item;
+
+        const index = entry.index;
+
+
+
+        const nomor = nilaiItem(item, [
+
+          'nomorUrut', 'nomor', 'Nomor Urut'
+
+        ]);
+
+
+
+        const id = nilaiItem(item, [
+
+          'idSlsSubSls', 'idSls', 'id', 'ID SLS/Sub SLS'
+
+        ]);
+
+
+
+        const kecamatan = nilaiItem(item, [
+
+          'kecamatan', 'Kecamatan'
+
+        ]);
+
+
+
+        const kelurahan = nilaiItem(item, [
+
+          'kelurahan', 'Kelurahan'
+
+        ]);
+
+
+
+        const namaWilayah = nilaiItem(item, [
+
+          'namaWilayah', 'nama', 'Nama Wilayah'
+
+        ]);
+
+
+
+        const rowNumber = ambilNomorBaris(item, index);
+
+
+
+        const tr = document.createElement('tr');
+
+
+
+        const tdNomor = document.createElement('td');
+
+        const badgeNomor = document.createElement('span');
+
+        badgeNomor.className = 'number-badge';
+
+        badgeNomor.textContent = nomor || '—';
+
+        tdNomor.appendChild(badgeNomor);
+
+
+
+        const tdId = document.createElement('td');
+
+        const idText = document.createElement('span');
+
+        idText.className = 'id-text';
+
+        idText.textContent = id || '—';
+
+        tdId.appendChild(idText);
+
+
+
+        const tdKecamatan = document.createElement('td');
+
+        tdKecamatan.textContent = kecamatan || '—';
+
+
+
+        const tdKelurahan = document.createElement('td');
+
+        tdKelurahan.textContent = kelurahan || '—';
+
+
+
+        const tdNama = document.createElement('td');
+
+        const namaText = document.createElement('span');
+
+        namaText.className = 'region-name';
+
+        namaText.textContent = namaWilayah || '—';
+
+        tdNama.appendChild(namaText);
+
+
+
+        const tdAksi = document.createElement('td');
+
+        tdAksi.className = 'text-center';
+
+
+
+        const actionGroup = document.createElement('div');
+
+        actionGroup.className = 'action-buttons justify-content-center';
+
+
+
+        const btnEdit = document.createElement('button');
+
+        btnEdit.type = 'button';
+
+        btnEdit.className = 'btn-icon';
+
+        btnEdit.title = 'Edit data';
+
+        btnEdit.setAttribute('aria-label', 'Edit data wilayah');
+
+        btnEdit.innerHTML = '<i class="bi bi-pencil-square"></i>';
+
+        btnEdit.addEventListener('click', function () {
+
+          mulaiEdit(index);
+
+        });
+
+
+
+        const btnHapus = document.createElement('button');
+
+        btnHapus.type = 'button';
+
+        btnHapus.className = 'btn-icon delete';
+
+        btnHapus.title = 'Hapus data';
+
+        btnHapus.setAttribute('aria-label', 'Hapus data wilayah');
+
+        btnHapus.innerHTML = '<i class="bi bi-trash3"></i>';
+
+        btnHapus.addEventListener('click', function () {
+
+          konfirmasiHapus(rowNumber, namaWilayah || id || nomor);
+
+        });
+
+
+
+        actionGroup.append(btnEdit, btnHapus);
+
+        tdAksi.appendChild(actionGroup);
+
+
+
+        tr.append(
+
+          tdNomor,
+
+          tdId,
+
+          tdKecamatan,
+
+          tdKelurahan,
+
+          tdNama,
+
+          tdAksi
+
+        );
+
+
+
+        tbody.appendChild(tr);
+
+      });
+
+    }
+
+
+
+    /**
+
+     * Membaca properti data dengan beberapa nama yang umum digunakan.
+
+     */
+
+    function nilaiItem(item, daftarProperti) {
+
+      if (!item || typeof item !== 'object') return '';
+
+
+
+      for (const properti of daftarProperti) {
+
+        if (
+
+          Object.prototype.hasOwnProperty.call(item, properti) &&
+
+          item[properti] !== null &&
+
+          item[properti] !== undefined
+
+        ) {
+
+          return String(item[properti]);
+
+        }
+
+      }
+
+
+
+      return '';
+
+    }
+
+
+
+    /**
+
+     * Nomor baris spreadsheet yang dikembalikan server diperlukan
+
+     * untuk operasi edit dan hapus.
+
+     */
+
+    function ambilNomorBaris(item, index) {
+
+      const nilai = nilaiItem(item, [
+
+        'row', 'rowNumber', 'baris', 'nomorBaris'
+
+      ]);
+
+
+
+      if (nilai !== '') {
+
+        const nomor = Number(nilai);
+
+        if (Number.isInteger(nomor) && nomor >= 2) {
+
+          return nomor;
+
+        }
+
+      }
+
+
+
+      /*
+
+       * Fallback ini hanya sesuai bila server mengembalikan data
+
+       * berurutan dari baris 2 tanpa melewatkan baris kosong.
+
+       * Lebih aman bila getDataWilayah() menyertakan properti row.
+
+       */
+
+      return index + 2;
+
+    }
+
+
+
+    /**
+
+     * Mengumpulkan data dari formulir.
+
+     */
+
+    function ambilForm() {
+
+      const nomorUrut = document.getElementById('nomorUrut')
+
+        .value.trim();
+
+
+
+      const idSlsSubSls = document.getElementById('idSlsSubSls')
+
+        .value.trim();
+
+
+
+      const kecamatan = document.getElementById('kecamatan')
+
+        .value.trim();
+
+
+
+      const kelurahan = document.getElementById('kelurahan')
+
+        .value.trim();
+
+
+
+      const namaWilayah = document.getElementById('namaWilayah')
+
+        .value.trim();
+
+
+
+      /*
+
+       * idSls disertakan sebagai alias untuk kompatibilitas
+
+       * jika Code.gs memakai nama properti tersebut.
+
+       */
+
+      return {
+
+        nomorUrut: nomorUrut,
+
+        idSlsSubSls: idSlsSubSls,
+
+        idSls: idSlsSubSls,
+
+        kecamatan: kecamatan,
+
+        kelurahan: kelurahan,
+
+        namaWilayah: namaWilayah
+
+      };
+
+    }
+
+
+
+    /**
+
+     * Menyimpan data baru atau memperbarui data yang diedit.
+
+     */
+
+    async function simpanForm(event) {
+      event.preventDefault();
+      if (sedangMenyimpan) return;
+      if (!document.getElementById('wilayahForm').reportValidity()) return;
+
+      const form = ambilForm();
+      const nomor = Number(form.nomorUrut);
+      if (!Number.isInteger(nomor) || nomor < 1) {
+        tampilkanAlert('Nomor urut tidak valid', 'Nomor urut harus berupa bilangan bulat minimal 1.', 'error');
+        return;
+      }
+
+      const editRow = document.getElementById('editRow').value;
+      const sedangEdit = editRow !== '';
+      sedangMenyimpan = true;
+      aturStatusTombolSimpan(true);
+
+      try {
+        const payload = sedangEdit
+          ? { action: 'update', row: Number(editRow), form: form }
+          : { action: 'create', form: form };
+        const hasil = await panggilApi(payload);
+        sedangMenyimpan = false;
+        aturStatusTombolSimpan(false);
+        const pesan = hasil.message || (sedangEdit
+          ? 'Data wilayah berhasil diperbarui.'
+          : 'Data wilayah berhasil ditambahkan.');
+        resetForm();
+        tampilkanAlert('Berhasil', pesan, 'success');
+        await muatData();
+      } catch (error) {
+        sedangMenyimpan = false;
+        aturStatusTombolSimpan(false);
+        tampilkanAlert('Gagal menyimpan data', ambilPesanError(error), 'error');
+      }
+    }
+
+    /**
+
+     * Memasukkan data terpilih ke formulir untuk diedit.
+
+     */
+
+    function mulaiEdit(index) {
+
+      const item = daftarWilayah[index];
+
+      if (!item) {
+
+        tampilkanAlert(
+
+          'Data tidak ditemukan',
+
+          'Muat ulang tabel dan coba kembali.',
+
+          'error'
+
+        );
+
+        return;
+
+      }
+
+
+
+      const nomor = nilaiItem(item, [
+
+        'nomorUrut', 'nomor', 'Nomor Urut'
+
+      ]);
+
+
+
+      const id = nilaiItem(item, [
+
+        'idSlsSubSls', 'idSls', 'id', 'ID SLS/Sub SLS'
+
+      ]);
+
+
+
+      document.getElementById('editRow').value =
+
+        ambilNomorBaris(item, index);
+
+
+
+      document.getElementById('nomorUrut').value = nomor;
+
+      document.getElementById('idSlsSubSls').value = id;
+
+      document.getElementById('kecamatan').value =
+
+        nilaiItem(item, ['kecamatan', 'Kecamatan']);
+
+      document.getElementById('kelurahan').value =
+
+        nilaiItem(item, ['kelurahan', 'Kelurahan']);
+
+      document.getElementById('namaWilayah').value =
+
+        nilaiItem(item, ['namaWilayah', 'nama', 'Nama Wilayah']);
+
+
+
+      document.getElementById('formTitle').textContent =
+
+        'Edit Data Wilayah';
+
+
+
+      document.getElementById('formSubtitle').textContent =
+
+        'Periksa informasi lalu simpan perubahan data.';
+
+
+
+      document.getElementById('btnSimpanText').textContent =
+
+        'Simpan Perubahan';
+
+
+
+      document.getElementById('btnResetText').textContent =
+
+        'Batal Edit';
+
+
+
+      document.getElementById('editNotice').classList.add('show');
+
+
+
+      document.getElementById('formPanel').scrollIntoView({
+
+        behavior: 'smooth',
+
+        block: 'start'
+
+      });
+
+
+
+      document.getElementById('nomorUrut').focus();
+
+    }
+
+
+
+    /**
+
+     * Mengembalikan formulir ke mode tambah.
+
+     */
+
+    function resetForm() {
+
+      document.getElementById('wilayahForm').reset();
+
+      document.getElementById('editRow').value = '';
+
+
+
+      document.getElementById('formTitle').textContent =
+
+        'Tambah Data Wilayah';
+
+
+
+      document.getElementById('formSubtitle').textContent =
+
+        'Masukkan informasi wilayah pada formulir berikut.';
+
+
+
+      document.getElementById('btnSimpanText').textContent =
+
+        'Simpan Data';
+
+
+
+      document.getElementById('btnResetText').textContent =
+
+        'Reset Form';
+
+
+
+      document.getElementById('editNotice').classList.remove('show');
+
+    }
+
+
+
+    /**
+
+     * Meminta konfirmasi sebelum menghapus data.
+
+     */
+
+    function konfirmasiHapus(row, namaWilayah) {
+
+      const area = document.createElement('div');
+
+      area.className = 'app-alert info';
+
+      area.style.alignItems = 'flex-start';
+
+
+
+      const icon = document.createElement('i');
+
+      icon.className = 'bi bi-exclamation-triangle';
+
+      icon.style.color = '#b45309';
+
+
+
+      const content = document.createElement('div');
+
+      content.style.flex = '1';
+
+
+
+      const title = document.createElement('strong');
+
+      title.textContent = 'Hapus data wilayah?';
+
+
+
+      const message = document.createElement('span');
+
+      message.textContent =
+
+        'Data "' + namaWilayah + '" akan dihapus dari spreadsheet.';
+
+
+
+      const actions = document.createElement('div');
+
+      actions.style.display = 'flex';
+
+      actions.style.gap = '8px';
+
+      actions.style.marginTop = '12px';
+
+
+
+      const cancel = document.createElement('button');
+
+      cancel.type = 'button';
+
+      cancel.className = 'btn btn-light btn-sm';
+
+      cancel.textContent = 'Batal';
+
+
+
+      const confirm = document.createElement('button');
+
+      confirm.type = 'button';
+
+      confirm.className = 'btn btn-danger btn-sm';
+
+      confirm.textContent = 'Ya, hapus';
+
+
+
+      actions.append(cancel, confirm);
+
+      content.append(title, message, actions);
+
+      area.append(icon, content);
+
+
+
+      document.getElementById('alertArea').appendChild(area);
+
+
+
+      cancel.addEventListener('click', function () {
+
+        area.remove();
+
+      });
+
+
+
+      confirm.addEventListener('click', function () {
+
+        area.remove();
+
+        hapusData(row);
+
+      });
+
+    }
+
+
+
+    /**
+
+     * Menghapus data berdasarkan nomor baris spreadsheet.
+
+     */
+
+    async function hapusData(row) {
+      if (sedangMenyimpan) return;
+      sedangMenyimpan = true;
+      try {
+        const hasil = await panggilApi({ action: 'delete', row: Number(row) });
+        sedangMenyimpan = false;
+        tampilkanAlert('Berhasil', hasil.message || 'Data wilayah berhasil dihapus.', 'success');
+        resetForm();
+        await muatData();
+      } catch (error) {
+        sedangMenyimpan = false;
+        tampilkanAlert('Gagal menghapus data', ambilPesanError(error), 'error');
+      }
+    }
+
+    /**
+
+     * Mengatur status tombol saat proses penyimpanan.
+
+     */
+
+    function aturStatusTombolSimpan(loading) {
+
+      const tombol = document.getElementById('btnSimpan');
+
+      tombol.disabled = loading;
+
+
+
+      if (loading) {
+
+        tombol.innerHTML =
+
+          '<span class="spinner-border spinner-border-sm me-2"></span>Menyimpan...';
+
+      } else {
+
+        tombol.innerHTML =
+
+          '<i class="bi bi-check2-circle me-1"></i>' +
+
+          '<span id="btnSimpanText">' +
+
+          (
+
+            document.getElementById('editRow').value !== ''
+
+              ? 'Simpan Perubahan'
+
+              : 'Simpan Data'
+
+          ) +
+
+          '</span>';
+
+      }
+
+    }
+
+
+
+    /**
+
+     * Status pemuatan tabel.
+
+     */
+
+    function setLoadingTabel(loading) {
+
+      const tbody = document.getElementById('tableBody');
+
+
+
+      if (loading) {
+
+        tbody.innerHTML = '';
+
+
+
+        const tr = document.createElement('tr');
+
+        const td = document.createElement('td');
+
+        td.colSpan = 6;
+
+
+
+        const state = document.createElement('div');
+
+        state.className = 'loading-state';
+
+
+
+        const spinner = document.createElement('div');
+
+        spinner.className = 'spinner-border';
+
+        spinner.setAttribute('role', 'status');
+
+
+
+        const message = document.createElement('div');
+
+        message.textContent = 'Memuat data wilayah...';
+
+
+
+        state.append(spinner, message);
+
+        td.appendChild(state);
+
+        tr.appendChild(td);
+
+        tbody.appendChild(tr);
+
+      }
+
+    }
+
+
+
+    function tampilkanErrorTabel(pesan) {
+
+      const tbody = document.getElementById('tableBody');
+
+      tbody.innerHTML = '';
+
+
+
+      const tr = document.createElement('tr');
+
+      const td = document.createElement('td');
+
+      td.colSpan = 6;
+
+      td.className = 'empty-state';
+
+
+
+      const icon = document.createElement('i');
+
+      icon.className = 'bi bi-exclamation-circle';
+
+
+
+      const title = document.createElement('strong');
+
+      title.textContent = 'Data gagal dimuat';
+
+
+
+      const description = document.createElement('span');
+
+      description.textContent = pesan;
+
+
+
+      td.append(icon, title, description);
+
+      tr.appendChild(td);
+
+      tbody.appendChild(tr);
+
+    }
+
+
+
+    /**
+
+     * Notifikasi aplikasi.
+
+     */
+
+    function tampilkanAlert(judul, pesan, tipe) {
+
+      const area = document.getElementById('alertArea');
+
+      const alert = document.createElement('div');
+
+      alert.className = 'app-alert ' + (tipe || 'info');
+
+
+
+      const icon = document.createElement('i');
+
+
+
+      if (tipe === 'success') {
+
+        icon.className = 'bi bi-check-circle-fill';
+
+      } else if (tipe === 'error') {
+
+        icon.className = 'bi bi-x-circle-fill';
+
+      } else {
+
+        icon.className = 'bi bi-info-circle-fill';
+
+      }
+
+
+
+      const content = document.createElement('div');
+
+      content.style.flex = '1';
+
+
+
+      const title = document.createElement('strong');
+
+      title.textContent = judul;
+
+
+
+      const message = document.createElement('span');
+
+      message.textContent = pesan;
+
+
+
+      content.append(title, message);
+
+      alert.append(icon, content);
+
+      area.appendChild(alert);
+
+
+
+      window.setTimeout(function () {
+
+        alert.remove();
+
+      }, 6000);
+
+    }
+
+
+
+    function ambilPesanError(error) {
+
+      if (!error) return 'Terjadi kesalahan yang tidak diketahui.';
+
+
+
+      if (typeof error === 'string') return error;
+
+
+
+      return error.message ||
+
+        error.details ||
+
+        'Terjadi kesalahan saat berkomunikasi dengan server.';
+
+    }
+
+
+
+    function formatAngka(angka) {
+
+      return Number(angka || 0).toLocaleString('id-ID');
+
+    }
+
+  </script>
+
+</body>
+
+</html>
